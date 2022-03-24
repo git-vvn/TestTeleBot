@@ -31,7 +31,6 @@ class Currencyconverter():
         for elem in keys.values():
             symbols_arr.append(elem)
         symbols_str = ",".join(map(str, symbols_arr))
-        print(symbols_str)
         result = requests.get(f'http://api.exchangeratesapi.io/v1/latest?access_key={API_KEY}&symbols={symbols_str}')
         #### Закомментированный вызов - платный, также как и изменение base-валюты API
         # exchangeEndpoint = f'http://api.exchangeratesapi.io/v1/convert?access_key='{API_KEY}'&from='{src_ticker}'&to='{target_ticker}'&amount='{keys[quantity]}
