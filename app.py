@@ -27,7 +27,7 @@ def convert(message: telebot.types.Message):
 
         target, src, quantity = values
 
-        total_price = Currencyconverter.convert(target, src, quantity)
+        total_price = Currencyconverter.get_price(target, src, quantity)
 
     except APIException as err:
         bot.reply_to(message, f'Ошибка пользователя.\n{err}')
