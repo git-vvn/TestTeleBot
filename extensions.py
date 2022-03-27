@@ -7,7 +7,7 @@ class APIException(Exception):
 
 class Currencyconverter():
     @staticmethod
-    def convert(target: str, src: str, quantity: str):
+    def get_price(target: str, src: str, quantity: str):
         symbols_arr = []
         if target == src:
             raise APIException('Невозможно перевести одинаковые валюты!')
